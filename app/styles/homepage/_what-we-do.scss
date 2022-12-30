@@ -1,0 +1,234 @@
+.what-we-do {
+	width: 100%;
+	height: 100%;
+	padding-top: 170px;
+	@media (min-width: $md) {
+		padding-top: 200px;
+	}
+
+	.caption {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&__description {
+			font-family: 'Kaushan Script';
+			font-size: 1rem;
+			letter-spacing: 2px;
+			padding-bottom: 5px;
+		}
+		&__title {
+			font-family: 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.5rem;
+			&::after {
+				content: '';
+				display: block;
+				position: relative;
+				background-color: $red;
+				width: 40px;
+				height: 2px;
+				margin: 20px auto;
+			}
+		}
+		p {
+			font-family: 'Roboto', sans-serif;
+			font-size: 0.6rem;
+			width: 300px;
+			text-align: center;
+			color: $dark-gray;
+			@media (min-width: $md) {
+				width: 600px;
+			}
+		}
+	}
+	.work {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-top: 40px;
+		gap: 20px;
+		@media (min-width: $md) {
+			flex-direction: row;
+			align-items: stretch;
+		}
+		&__part1 {
+			img {
+				width: 300px;
+				@media (min-width: $md) {
+					width: 400px;
+				}
+			}
+		}
+		&__part2 {
+			width: 300px;
+			@media (min-width: $md) {
+				width: 400px;
+			}
+
+			&__content {
+				border: 1px solid $light-gray;
+				margin-bottom: 2px;
+				&.active {
+					p {
+						display: block;
+						margin-right: 25px;
+						margin-top: 10px;
+						margin-bottom: 5px;
+						padding: 0px 10px;
+					}
+					small {
+						transform: rotate(180deg);
+					}
+					h5 {
+						border-bottom: 1px solid $light-gray;
+					}
+				}
+			}
+
+			img {
+				position: relative;
+				width: 20px;
+				height: 22px;
+				top: 20px;
+				left: 10px;
+			}
+
+			small {
+				position: relative;
+				font-size: 1.2rem;
+				left: 240px;
+				top: 20px;
+				color: $gray;
+				cursor: pointer;
+				transition: transform 0.4s ease-in;
+				@media (min-width: $md) {
+					left: 330px;
+				}
+			}
+			h5 {
+				font-family: 'Montserrat', sans-serif;
+				text-transform: uppercase;
+				font-size: 0.8rem;
+				padding-left: 45px;
+				padding-bottom: 10px;
+			}
+			p {
+				font-family: 'Roboto', sans-serif;
+				font-size: 0.7rem;
+				font-style: oblique;
+				color: $dark-gray;
+				display: none;
+				height: auto;
+				overflow-y: scroll;
+				height: 88.66px;
+
+				&::-webkit-scrollbar {
+					width: 5px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: $light-green;
+					border-radius: 200px;
+				}
+				&::-webkit-scrollbar-track {
+					background-color: $light-gray;
+				}
+			}
+		}
+	}
+}
+
+.mySwiper {
+	width: 100%;
+	height: 150px;
+	background-color: $light-gray;
+	margin-top: 100px;
+
+	.swiper-wrapper {
+		padding-top: 5px;
+		@media (min-width: $md) {
+			padding-top: 0;
+		}
+		.my-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.slide-container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+
+				@media (min-width: $md) {
+					flex-direction: row;
+					gap: 40px;
+				}
+
+				&__image {
+					img {
+						width: 50%;
+						padding: 10px;
+						border: 2px solid $light-green;
+						@media (min-width: $md) {
+							width: 100%;
+						}
+					}
+				}
+				&__text {
+					width: 350px;
+					padding: 10px;
+
+					@media (min-width: $md) {
+						width: 400px;
+					}
+					p {
+						font-family: 'Roboto', sans-serif;
+						font-size: 0.8rem;
+						font-style: oblique;
+						color: $dark-gray;
+					}
+					small {
+						font-family: 'Kaushan Script';
+						font-weight: 700;
+						padding-left: 45px;
+						&::after {
+							content: '';
+							display: block;
+							position: relative;
+							width: 40px;
+							height: 2px;
+							background-color: $red;
+							right: 2px;
+							bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.next-button,
+	.prev-button {
+		color: $gray;
+		&::after {
+			font-size: 1rem;
+		}
+		@media (min-width: $md) {
+			display: block;
+		}
+	}
+	.next-button {
+		right: 0;
+		@media (min-width: $md) {
+			right: 25%;
+		}
+	}
+	.prev-button {
+		left: 0;
+		@media (min-width: $md) {
+			left: 25%;
+		}
+	}
+}

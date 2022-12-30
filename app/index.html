@@ -1,0 +1,25 @@
+{% extends "partials/layout.html" %}
+
+{% block content %}
+
+    <!-- Site Header -->
+    {% include "partials/common/header.html" %}
+
+    <main>
+        {% include "partials/homepage/intro.html" %}
+        {% include "partials/homepage/about-section.html" %}
+        {% include "partials/homepage/services-section.html" %}
+        {% include "partials/homepage/devices-section.html" %}
+        {% include "partials/homepage/what-we-do.html" %}
+        {% include "partials/homepage/team-section.html" %}
+        {% include "partials/homepage/works-section.html" %}
+        {% include "partials/homepage/happy-clients.html" %}
+        {% include "partials/homepage/blog.html" %}
+        
+    </main>
+
+    <!-- Site Footer -->
+    {% include "partials/common/footer.html" %}
+ 
+
+{% endblock %}

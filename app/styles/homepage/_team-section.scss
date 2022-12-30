@@ -1,0 +1,147 @@
+.team {
+	width: 100%;
+	height: 100%;
+	padding-top: 50px;
+	.caption {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&__description {
+			font-family: 'Kaushan Script';
+			font-size: 1rem;
+			letter-spacing: 2px;
+			padding-bottom: 5px;
+		}
+		&__title {
+			font-family: 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.5rem;
+			&::after {
+				content: '';
+				display: block;
+				position: relative;
+				background-color: $red;
+				width: 40px;
+				height: 2px;
+				margin: 20px auto;
+			}
+		}
+		p {
+			font-family: 'Roboto', sans-serif;
+			font-size: 0.6rem;
+			width: 300px;
+			text-align: center;
+			color: $dark-gray;
+			@media (min-width: $md) {
+				width: 600px;
+			}
+		}
+	}
+	.picture {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 60px;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		@media (min-width: $md) {
+			flex-direction: row;
+			gap: 20px;
+		}
+		&__box {
+			position: relative;
+			width: 250px;
+			height: 300px;
+			background-position: contain;
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+			.overlay {
+				position: absolute;
+				width: 250px;
+				height: 0;
+				background: linear-gradient(
+					rgba(246, 37, 44, 0.8),
+					rgba(184, 138, 33, 0.8)
+				);
+				opacity: 0.8;
+				visibility: hidden;
+				transition: height 0.5s ease;
+			}
+
+			&:hover {
+				box-shadow: 5px 5px 0px 0px $light-green;
+
+				.overlay {
+				visibility: visible;
+				height: 300px;
+				bottom: 0;
+				}
+				.picture__content {
+					visibility: visible;
+				}
+			}
+		}
+		&__content {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 140px;
+			gap: 0.8px;
+			cursor: pointer;
+			visibility: hidden;
+
+
+			i {
+				color: $white;
+				padding: 10px;
+				color: $red;
+				background-color: $yellow;
+				&:hover {
+					background-color: $red;
+					color: $white;
+				}
+			}
+		}
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 140px;
+
+			@media (min-width: $md) {
+				padding-top: 150px;
+			}
+
+			h5 {
+				font-family: 'Montserrat', sans-serif;
+				text-transform: uppercase;
+				font-size: 0.8rem;
+			}
+			small {
+				font-family: 'Roboto', sans-serif;
+				font-style: oblique;
+				font-size: 0.7rem;
+				color: $gray;
+				padding-top: 5px;
+			}
+		}
+	}
+	.logos-background {
+		width: 100%;
+		height: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $light-gray;
+		margin-top: 100px;
+		img {
+			width: 800px;
+		}
+	}
+}
